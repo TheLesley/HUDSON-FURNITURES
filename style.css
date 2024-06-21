@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+}
+:root {
+    --beige: #F5F5DC;
+    --brown: #8B4513;
+    --black: #000;
+    --dark-green: #006400;
+}
+section {
+    padding: 50px 10%;
+}
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 100px;
+    background: var(--beige);
+}
+.logo {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--black);
+}
+.logo a {
+    color: var(--brown);
+}
+.navbar {
+    position: relative;
+    display: flex;
+}
+.navbar a {
+    font-size: 1rem;
+    padding: 10px 20px;
+    font-weight: 500;
+    color: var(--black);
+}
+.navbar a:hover {
+    background-color: var(--brown);
+    color: var(--beige);
+}
+#menu-icon {
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--beige);
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.home {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(./Images/pexels-pixabay-262048.jpg);
+    background-color: var(--brown);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+}
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.home h1 {
+    animation: slideIn 3s ease-out;
+}
+.home p {
+    animation: slideIn 3s ease-out;
+}
+.home a {
+    animation: slideIn 3s ease-out;
+}
+.home-text h1 {
+    font-size: 2.7rem;
+    font-weight: bolder;
+    color: var(--beige);
+}
+.home-text p {
+    font-size: 1.1rem;
+    font-weight: bolder;
+    margin: 0.4rem 0.18rem;
+    color: var(--beige);
+}
+.home-text span {
+    color: var(--brown);
+}
+.btn {
+    padding: 10px 14px;
+    background: var(--brown);
+    color: var(--beige);
+    border-radius: 5px;
+    font-size: 15px;
+}
+.btn:hover {
+    background: var(--beige);
+    color: var(--brown);
+}
+.title-price {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+}
+.title-price h3 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+.shop {
+    text-align: center;
+    margin: 50px 0;
+}
+.shop .heading {
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+.shop .heading span {
+    color: var(--brown);
+    font-weight: bold;
+}
+.shop .heading h2 {
+    font-size: 36px;
+    margin: 10px 0;
+}
+.product_list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 0 40px;
+}
+.dope_products {
+    background-color: var(--brown);
+    border-radius: 20px;
+    margin-top: 20px;
+}
+.details {
+    text-align: center;
+    color: var(--black);
+}
+.detail_container {
+    position: absolute;
+    top: 51%;
+    left: 10%;
+    width: 300px;
+    height: 230px;
+    padding: 20px;
+    border: 1.3px solid var(--black);
+    border-radius: 30px;
+}
+.detail_container h3 {
+    position: absolute;
+    left: 29%;
+}
+.detail_container ul {
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    color: #643242;
+}
+.detail_container ul li {
+    list-style-type: none;
+}
+.bedroom_list, .living_list, .dinning_list, .office_list, .outdoor_list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 0 40px;
+}
+.dope_bedrooms, .dope_livings, .dope_dinnings, .dope_offices, .outdoor_offices {
+    background-color: var(--brown);
+    border-radius: 20px;
+    margin-top: 20px;
+}
+.bedroomDetails, .livingDetails, .dinningDetails, .officeDetails, .outdoorDetails {
+    text-align: center;
+    color: var(--black);
+}
+.bedroomDetails_container, .livingDetails_container, .dinningDetails_container, .officeDetails_container, .outdoorDetails_container {
+    position: absolute;
+    top: 51%;
+    left: 10%;
+    width: 300px;
+    height: 230px;
+    padding: 20px;
+    border: 1.3px solid var(--black);
+    border-radius: 30px;
+}
+.bedroomDetails_container h3, .livingDetails_container h3, .dinningDetails_container h3, .officeDetails_container h3, .outdoorDetails_container h3 {
+    position: absolute;
+    left: 29%;
+}
+.bedroomDetails_container ul, .livingDetails_container ul, .dinningDetails_container ul, .officeDetails_container ul, .outdoorDetails_container ul {
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    color: #643242;
+}
+.bedroomDetails_container ul li, .livingDetails_container ul li, .dinningDetails_container ul li, .officeDetails_container ul li, .outdoorDetails_container ul li {
+    list-style-type: none;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 992px) {
+    header {
+        padding: 18px 50px;
+    }
+    .home-text h1 {
+        font-size: 2.2rem;
+    }
+    .home-text p {
+        font-size: 1rem;
+    }
+    .product_list, .bedroom_list, .living_list, .dinning_list, .office_list, .outdoor_list {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 18px 20px;
+    }
+    #menu-icon {
+        display: block;
+    }
+    .navbar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+    .navbar a {
+        padding: 10px 0;
+    }
+    .navbar a:hover {
+        background-color: var(--brown);
+    }
+    .navbar.active {
+        display: flex;
+    }
+    .product_list, .bedroom_list, .living_list, .dinning_list, .office_list, .outdoor_list {
+        grid-template-columns: 1fr;
+    }
+    .home-text h1 {
+        font-size: 1.8rem;
+    }
+    .home-text p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .home-text h1 {
+        font-size: 1.5rem;
+    }
+    .home-text p {
+        font-size: 0.8rem;
+    }
+    .btn {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+    .detail_container, .bedroomDetails_container, .livingDetails_container, .dinningDetails_container, .officeDetails_container, .outdoorDetails_container {
+        width: 100%;
+        left: 0;
+        border-radius: 10px;
+    }
+}
